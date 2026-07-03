@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMJ AE 共同作者教练"
+  short_description: "按 AMJ 证据标准诊断、设计与修改管理学实证论文"
+  default_prompt: "Use $amj-ae-coach to diagnose my manuscript against AMJ standards before proposing revisions."
