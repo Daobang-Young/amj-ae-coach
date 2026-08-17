@@ -1,0 +1,5 @@
+interface:
+  display_name: "Entrepreneurship Paper Coach"
+  short_description: "Diagnose and strengthen entrepreneurship manuscripts"
+  default_prompt: "Use $entrepreneurship-paper-coach to diagnose my entrepreneurship manuscript before proposing revisions."
+

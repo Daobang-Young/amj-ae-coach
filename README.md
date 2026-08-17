@@ -1,66 +1,77 @@
-# AMJ AE Coach
+# Academic Paper Coach Skills
 
-`amj-ae-coach` is a Codex Agent Skill for authors developing empirical manuscripts for the *Academy of Management Journal* (AMJ).
+This repository contains two complementary Codex Agent Skills for developing management and entrepreneurship manuscripts.
 
-It distills the seven-part AMJ "Publishing in AMJ" editorial series into a quantitative-first developmental workflow, calibrated against current AMJ/AOM submission, transparency, style, and AI-responsibility guidance.
+| Skill | Primary use |
+|---|---|
+| `amj-ae-coach` | AMJ-specific developmental review, current AOM policy checks, quantitative-first design auditing, and submission preparation |
+| `entrepreneurship-paper-coach` | Reviewer-style coaching for entrepreneurship topics, positioning, theory, design, sections, full manuscripts, and journal fit across ETP, JBV, SEJ, AMJ, and related journals |
 
-## What it does
+## Entrepreneurship Paper Coach
 
-- Pressure-tests topic significance, novelty, curiosity, scope, and actionability.
-- Audits research-question, theory, design, data, and method alignment before data collection.
-- Diagnoses introductions, theory and hypotheses, methods, results, and discussions.
-- Performs a full-manuscript pre-submission red-team audit.
-- Diagnoses in Chinese and produces English candidate prose only after explicit authorization.
-- Uses evidence labels to distinguish AMJ guidance, current policy, methodological norms, and coaching inference.
+`entrepreneurship-paper-coach` combines the connected AMJ author-development logic with entrepreneurship-specific craft guidance from Shepherd and Wiklund (2020), while keeping their experience-based heuristics separate from current journal policy.
+
+It:
+
+- tests whether the entrepreneurial phenomenon is theoretically central rather than merely present in the sample;
+- replaces gap spotting with an explicit conversation-change test;
+- maps theory input, entrepreneurial transformation, and theory output;
+- distinguishes deductive, inductive, abductive, mixed, conceptual, review, methods, and design-science work;
+- audits the full chain from phenomenon and question to evidence and bounded contribution;
+- verifies current journal scope before fit or readiness conclusions;
+- diagnoses before rewriting and requires explicit authorization for manuscript prose.
+
+For AMJ entrepreneurship papers, use both skills: `amj-ae-coach` governs journal mission, policy, readiness gates, and AI disclosure; `entrepreneurship-paper-coach` supplies the domain lens.
 
 ## Install
 
-Download or clone this repository, then copy:
+Copy either or both skill folders into the user-level Codex skills directory:
 
 ```text
 skills/amj-ae-coach
+skills/entrepreneurship-paper-coach
 ```
 
-to your user-level Codex skills directory:
+Typical destination:
 
 ```text
-~/.agents/skills/amj-ae-coach
+~/.codex/skills/
 ```
 
-Codex normally detects skill changes automatically. Restart Codex if it does not appear.
+Restart Codex if a newly installed skill does not appear automatically.
 
 ## Use
 
-Invoke it explicitly:
-
 ```text
-$amj-ae-coach 按 AMJ 标准评估这个研究选题
+$entrepreneurship-paper-coach Assess whether this entrepreneurship topic has top-journal potential
+$entrepreneurship-paper-coach Diagnose this manuscript's introduction and theoretical contribution
+$entrepreneurship-paper-coach Run a pre-submission red-team review of this ETP manuscript
+$amj-ae-coach Evaluate this research topic against AMJ standards
 ```
-
-It can also trigger from requests such as:
-
-- 按 AMJ 标准审查我的研究设计
-- 帮我诊断这篇论文的引言
-- 对整稿做 AMJ 投稿前红队审计
-- Audit this quantitative manuscript against AMJ standards
 
 ## Contents
 
 ```text
-skills/amj-ae-coach/
-├── SKILL.md
-├── agents/openai.yaml
-└── references/
-    ├── current-policy-and-ai.md
-    ├── evidence-base.md
-    ├── quantitative-audit.md
-    └── workflows-and-outputs.md
+skills/
+├── amj-ae-coach/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/
+└── entrepreneurship-paper-coach/
+    ├── SKILL.md
+    ├── agents/openai.yaml
+    └── references/
+        ├── entrepreneurship-craft.md
+        ├── journal-and-output-protocols.md
+        ├── paradigm-routing.md
+        └── reviewer-logic.md
 ```
 
 ## Source boundary
 
-The repository does not redistribute the original AMJ PDFs. It contains original, source-attributed paraphrases and workflow guidance. Users remain responsible for verifying current journal requirements, citations, empirical claims, and any AI-use disclosure required by AOM.
+The repository does not redistribute the source PDFs. It contains original, source-attributed paraphrases and workflow guidance. Users remain responsible for checking current journal requirements, verifying citations and empirical claims, protecting confidential data, and disclosing AI use when required.
 
 ## Status
 
-Current-policy layer last verified: 2026-07-03.
+- AMJ current-policy layer last verified: 2026-07-03.
+- Entrepreneurship journal boundary snapshot last verified: 2026-08-17.
